@@ -16,8 +16,8 @@ class RationalNumber {
   int denominator_;  // der Nenner
 
   void reduce() {
-    numerator_ = numerator_ / gcd(numerator_, denominator_);
-    denominator_ = denominator_ / gcd(numerator_, denominator_);
+    int tmpgcd = gcd(numerator_, denominator_);
+    numerator_ = numerator_ / tmpgcd, denominator_ = denominator_ / tmpgcd;
   }
 
  public:
